@@ -1,0 +1,13 @@
+.homeContainer {
+  /* background-image: url("../../assets/images/HomeBackground.png"); */
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px; */
+}
