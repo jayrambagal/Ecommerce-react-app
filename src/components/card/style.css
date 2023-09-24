@@ -1,0 +1,91 @@
+.cardContainter {
+  display: flex;
+  flex-direction: column;
+  width: 239px;
+  height: 450px;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+  background-color: white;
+}
+
+.productImage {
+  width: 100%;
+  height: 325px;
+  position: relative;
+}
+.imageSelf {
+  width: fit-content;
+  height: fit-content;
+}
+.imageSelf {
+  width: 100%;
+  height: 100%;
+}
+.productFavorite {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.productViewBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 47px;
+  background-color: rgba(109, 132, 255, 0.71);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.productDetails {
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+.productTitle {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #000000;
+  margin: 0;
+}
+.productPrice {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+}
+.originalPrice {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+.discountedPrice {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: rgba(109, 132, 255, 1);
+}
