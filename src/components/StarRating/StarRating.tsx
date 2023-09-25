@@ -3,8 +3,6 @@ interface StarRatingProps {
     value: number | string;
 }
 function StarRating({ value }: StarRatingProps) {
-    console.log(value);
-
     const maxStars = 5;
     return (
         <div className="star-rating">

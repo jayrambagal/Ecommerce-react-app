@@ -2,19 +2,24 @@ import React, { useState, ChangeEvent } from 'react';
 import './style.css'
 import Search from '../../assets/icons/Search';
 import SuggestionBox from '../suggestionBox/SuggestionBox';
-interface SearchBarProps {
-    onSearch: (term: string) => void;
-}
+import { useNavigate } from 'react-router-dom';
 
-function SearchBar({ onSearch }: SearchBarProps) {
+function SearchBar() {
     const [searchTerm, setSearchTerm] = useState<string>('');
+    const navigate = useNavigate()
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
     };
 
     const handleSearch = () => {
-        onSearch(searchTerm);
+        navigate(`/products/${searchTerm}`)
+
+    };
+    const handleKeyDown = (e: any) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
     };
 
     return (
@@ -25,8 +30,9 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     placeholder="Search"
                     value={searchTerm}
                     onChange={handleInputChange}
+                    onKeyDown={(e) => handleKeyDown(e)}
                 />
-                <div className='searchIcon'><Search /></div>
+                <div className='searchIcon' onClick={() => handleSearch()}><Search /></div>
             </div>
             {searchTerm && <SuggestionBox />}
         </>
