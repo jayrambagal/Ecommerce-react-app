@@ -1,13 +1,34 @@
 .homeContainer {
-  /* background-image: url("../../assets/images/HomeBackground.png"); */
-  background-size: cover; /* Adjust as needed */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  /* padding: 40px; */
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-top: 5%;
+  gap: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+.homeContainer::-webkit-scrollbar {
+  width: 0; /* Chrome, Safari, Opera */
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.backgroundImage {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.ziviLogo {
+  position: fixed;
+  z-index: 1000;
+  top: 40px;
+  right: 40px;
 }
