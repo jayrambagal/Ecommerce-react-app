@@ -1,5 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import './style.css'
+import Search from '../../assets/icons/Search';
+import SuggestionBox from '../suggestionBox/SuggestionBox';
 interface SearchBarProps {
     onSearch: (term: string) => void;
 }
@@ -16,15 +18,18 @@ function SearchBar({ onSearch }: SearchBarProps) {
     };
 
     return (
-        <div className="searchbar">
-            <input
-                type="text"
-                placeholder="Search"
-                value={searchTerm}
-                onChange={handleInputChange}
-            />
-            <img src='' alt="search" />
-        </div>
+        <>
+            <div className="searchBar">
+                <input
+                    type="text"
+                    placeholder="Search"
+                    value={searchTerm}
+                    onChange={handleInputChange}
+                />
+                <div className='searchIcon'><Search /></div>
+            </div>
+            {searchTerm && <SuggestionBox />}
+        </>
     );
 }
 

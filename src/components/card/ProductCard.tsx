@@ -66,7 +66,7 @@ function ProductCard({ product }: ProductCardProps) {
                         )}
                     </div>
                     <div className="productDetails">
-                        <h1 className="productTitle">{product.description}</h1>
+                        <h1 className="productTitle">{product.description.slice(0, 20)}{product.description.length > 20 && '..'}</h1>
                         <h3 className="productPrice">
                             <span className="originalPrice">{`Rs.${product.price.toFixed(
                                 0

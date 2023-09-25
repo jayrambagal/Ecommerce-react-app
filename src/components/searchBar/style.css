@@ -1,11 +1,12 @@
-.searchbar {
-  width: 915px;
+.searchBar {
+  width: 60.48%;
   height: 83px;
   position: relative;
-  top: 122px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.searchbar input {
+.searchBar input {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -13,11 +14,30 @@
   border-radius: 20px;
   padding-left: 40px;
   font-size: 32px;
+  font-family: Inter;
 }
-
-.searchbar img {
+.searchBar input:focus {
+  outline: none;
+}
+input[type="text"] {
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8);
+}
+.searchIcon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .searchBar {
+    width: 94%;
+  }
 }

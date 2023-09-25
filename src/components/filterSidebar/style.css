@@ -1,6 +1,6 @@
 .filterSidebarContainer {
-  width: 281px;
-  height: auto;
+  width: 390px;
+  height: 90%;
   display: flex;
   flex-direction: column;
 }
