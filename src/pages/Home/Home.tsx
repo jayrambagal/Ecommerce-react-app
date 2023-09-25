@@ -11,7 +11,7 @@ function Home() {
             <img src={Logo} alt="logo" className="ziviLogo" />
             <div className="homeContainer">
                 <img src={image} className="backgroundImage" alt="" />
-                <SearchBar onSearch={() => console.log("hello")} />
+                <SearchBar />
             </div>
         </>
 

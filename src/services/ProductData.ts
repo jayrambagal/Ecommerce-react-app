@@ -59,7 +59,7 @@ export function useProductData() {
   }
 
   useEffect(() => {
-    const clothingProducts: Product[] = generateClothingProducts(100);
+    const clothingProducts: Product[] = generateClothingProducts(1000);
     setProducts(clothingProducts);
   }, []);
 

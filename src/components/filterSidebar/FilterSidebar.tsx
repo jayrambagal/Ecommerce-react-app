@@ -36,7 +36,6 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         {openFilters[index] && (
                             <div className="filterInputs">
                                 {FILTER_DATA[index].items.map((checkText, inputIndex) => {
-                                    console.log(checkText);
                                     return (
                                         <label className="inputLabel" key={inputIndex}>
                                             <input

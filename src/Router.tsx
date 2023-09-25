@@ -6,7 +6,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products/:searchTerm" element={<Products />} />
       </Routes>
     </BrowserRouter>
   );
